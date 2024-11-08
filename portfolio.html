@@ -26,15 +26,22 @@
         </nav>
     </header>
 
+
 <section class="portfolio-section"> 
     <h2>My Work</h2>
+
     <div class="projects">
+
         <div class="project-box" id="project1">
+
                  <div class="project-content">
                 <h3>Custom Craft</h3>
+
+
                 <p class="brief">Custom Craft is an e-commerce website designed to simplify the process of purchasing laptops, computers, software, and hardware. Our platform helps users find the perfect tech solutions tailored to their specific needs. With a user-friendly interface and curated product selections, Custom Craft makes it easy for everyone, from students to professionals, to discover the right technology for their requirements.</p>
             </div>
-<div class="hidden-content">                
+<div class="hidden-content"> 
+               
 <img src="Photos\Screenshot 2024-04-29 013145.png" alt="Project 1" class="project-image">
    
             
@@ -43,6 +50,8 @@
                 <img src="Photos\Screenshot 2024-04-29 015015.png" alt="Project 1 Details">
                 <img src="Photos\cart.png" alt="Project 1 Details">
                  <img src="Photos\Screenshot 2024-04-28 163311.png"s alt="Project 1 Details">
+<button class="back-button" onclick="goBackToMain()">Back</button>
+
 
             </div>
         </div>
@@ -57,6 +66,8 @@ This logo embodies the essence of the brand, making it instantly recognizable to
             </div>
             <div class="hidden-content">
 <img src="Photos\waltss.png" alt="Project 2" class="project-image">
+<button class="back-button" onclick="goBackToMain()">Back</button>
+
         </div>
         </div>
 <div class="project-box" id="project3">
@@ -70,6 +81,8 @@ This logo embodies the essence of the brand, making it instantly recognizable to
 <img src="Photos\second.png" alt="Project 2" class="project-image">
 <img src="Photos\eathotdogg.png" alt="Project 2" class="project-image">
 <img src="Photos\search.png" alt="Project 2" class="project-image">
+<button class="back-button" onclick="goBackToMain()">Back</button>
+
 
         </div>
         </div>
@@ -82,6 +95,8 @@ This logo embodies the essence of the brand, making it instantly recognizable to
             </div>
             <div class="hidden-content">
                                 <img src="Photos\Screenshot 2024-10-07 130747.png" alt="Project 3 Details">
+<button class="back-button" onclick="goBackToMain()">Back</button>
+
             </div>
         </div>
     </div>
@@ -119,6 +134,17 @@ This logo embodies the essence of the brand, making it instantly recognizable to
                 // If already expanded, collapse and show all projects again
                 document.querySelector('.projects').classList.remove('hidden');
             }
+function goBackToMain() {
+    // Collapse all project boxes
+    const projectBoxes = document.querySelectorAll('.project-box');
+    projectBoxes.forEach((box) => {
+        box.classList.remove('expanded');
+    });
+
+    // Show all projects again
+    document.querySelector('.projects').classList.remove('hidden');
+}
+
           
         });
     });
